@@ -1,0 +1,27 @@
+
+body{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calCulator{
+    height: 3em;
+    font-size: 1em;
+}
+.container{
+    background-color: black;
+    padding: 15px;
+}
+.btn{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+button{
+    height: 40px;
+    background-color: aqua;
+    font-size: 1em;
+}
+button:hover{
+    background-color: brown;
+}
