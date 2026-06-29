@@ -1,29 +1,57 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <input type="text" id="calculator" disabled><br>
-        <button onclick="calcNum('9')">9</button>
-        <button onclick="calcNum('8')">8</button>
-        <button onclick="calcNum('7')">7</button>
-        <button onclick="calcNum('÷')">÷</button><br>
-        <button onclick="calcNum('6')">6</button>
-        <button onclick="calcNum('5')">5</button>
-        <button onclick="calcNum('4')">4</button>
-        <button onclick="calcNum('*')">×</button><br>
-        <button onclick="calcNum('3')">3</button>
-        <button onclick="calcNum('2')">2</button>
-        <button onclick="calcNum('1')">1</button>
-        <button onclick="calcNum('-')">-</button><br>
-        <button onclick="calcNum('0')">0</button>
-        <button onclick="calcNum('+')">+</button>
-        <button onclick="calcNum('0')">0</button>
-        <button onclick="calcNum('.')">.</button><br>
-        <button onclick="calcNum('')">=</button>
-        <button onclick="calcNum('(')">(</button>
-        <button onclick="calcNum(')')">)</button>
-        <button onclick="calcNum('**')">^</button><br>
-        <button onclick="calcNum('**0.5')">√</button>
-        <button onclick="clearBtn()">C</button>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="calCulator" disabled>
+        
+        <div class="btn">
+            <button onclick="calcNum('(')">(</button>
+            <button onclick="calcNum(')')">)</button>
+            <button onclick="calcNum('**')">^</button>
+            <button onclick="calcNum('**(0.5)')">√</button>
+            
+            <button onclick="calcNum('9')">9</button>
+            <button onclick="calcNum('8')">8</button>
+            <button onclick="calcNum('7')">7</button>
+            <button onclick="calcNum('/')">÷</button>
+            
+            <button onclick="calcNum('6')">6</button>
+            <button onclick="calcNum('5')">5</button>
+            <button onclick="calcNum('4')">4</button>
+            <button onclick="calcNum('*')">×</button>
+            
+            <button onclick="calcNum('3')">3</button>
+            <button onclick="calcNum('2')">2</button>
+            <button onclick="calcNum('1')">1</button>
+            <button onclick="calcNum('-')">-</button>
+            
+            <button onclick="calcNum('0')">0</button>
+            <button onclick="calcNum('.')">.</button>
+            <button onclick="finalAns('')">=</button>
+            <button onclick="calcNum('+')">+</button>
+            <button onclick="clearBtn()">C</button>
+        </div>
+    </div>
+
+    <script>
+    function calcNum(num){
+        const calcNumShow = document.getElementById('calCulator');
+        calcNumShow.value += num;
+    }
+    function clearBtn(){
+        const variabo = document.getElementById('calCulator')
+        variabo.value = '';
+    }
+    function finalAns(){
+        const variabo = document.getElementById('calCulator')
+        variabo.value = eval(variabo.value);
+    }
+    </script>
+</body>
+
 </html>
