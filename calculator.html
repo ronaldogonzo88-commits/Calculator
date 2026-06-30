@@ -35,6 +35,7 @@
             <button onclick="finalAns('')">=</button>
             <button onclick="calcNum('+')">+</button>
             <button onclick="clearBtn()">C</button>
+            <button onclick="backSpace()">b</button>
         </div>
     </div>
 
@@ -54,6 +55,10 @@
     function calcSqure(){
         const calcNumShow = document.getElementById('calCulator');
         calcNumShow.value = Math.sqrt(eval(calcNumShow.value));
+    }
+    function backSpace(){
+        const calcNumShow = document.getElementById('calCulator');
+        calcNumShow.value = calcNumShow.value.slice(0, -1);
     }
     </script>
 </body>
