@@ -13,7 +13,7 @@
             <button onclick="calcNum('(')">(</button>
             <button onclick="calcNum(')')">)</button>
             <button onclick="calcNum('**')">^</button>
-            <button onclick="calcNum('**(0.5)')">√</button>
+            <button onclick="calcSqure()">√</button>
             
             <button onclick="calcNum('9')">9</button>
             <button onclick="calcNum('8')">8</button>
@@ -45,13 +45,16 @@
     }
     function clearBtn(){
         const variabo = document.getElementById('calCulator')
-        variabo.value = '';
+        variabo.value = " ";
     }
     function finalAns(){
         const variabo = document.getElementById('calCulator')
-        variabo.value = eval(variabo.value.replace);
+        variabo.value = eval(variabo.value);
+    }
+    function calcSqure(){
+        const calcNumShow = document.getElementById('calCulator');
+        calcNumShow.value = Math.sqrt(eval(calcNumShow.value));
     }
     </script>
 </body>
-
 </html>
